@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <mat-form-field class="full-width-search">
+    <input matInput [(ngModel)]="searchQuery" placeholder="Pesquisar por nome" (input)="updateFilter()">
+  </mat-form-field>
+
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let client of filteredClients" (click)="openClientDetails(client)">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <img mat-card-lg-image [src]="client.image_src" alt="{{ client.name }}">
+            <mat-card-title>{{ client.name }}</mat-card-title>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            <strong>Total de Empreendimentos:</strong> {{ client.totalEnterprises }}
+          </p>
+          <p>
+            <strong>Total de Imóveis/Unidades:</strong> {{ client.totalRealties }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+
+

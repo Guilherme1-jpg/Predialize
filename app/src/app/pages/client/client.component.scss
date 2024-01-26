@@ -1,0 +1,25 @@
+.example-card {
+  width: 300px;
+  margin: 15px;
+  overflow: hidden;
+}
+
+mat-card-title-group {
+  display: flex;
+  align-items: start;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-width-search {
+  width: 100%;
+}
+
